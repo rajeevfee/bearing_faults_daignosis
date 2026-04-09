@@ -106,49 +106,6 @@ Eighteen scalar features are extracted per segment per channel across three doma
 
 ---
 
-### Envelope Spectrum Analysis (Kurtogram-Guided)
-
-Raw FFT cannot reliably reveal bearing fault rates because impulse energy modulates a high-frequency resonance carrier rather than appearing as a direct low-frequency tone. The Envelope Spectrum Analysis (ESA) pipeline addresses this with five steps:
-
-1. **Spectral Kurtosis scan** — sweeps centre frequency and bandwidth at four resolution levels to find the resonance band most excited by bearing impacts (Antoni 2006/2007).
-2. **Kurtogram-guided bandpass filter** — 4th-order zero-phase Butterworth filter centred on the optimal band.
-3. **Hilbert demodulation** — `envelope(t) = |analytic_signal(t)|`.
-4. **Envelope FFT** — bearing fault rates (BPFO, BPFI, BSF, FTF) now appear as discrete spectral lines.
-5. **Peak-ratio diagnostics** — Harmonic Sum Scores (HSS) quantify peak amplitude at each fault frequency relative to the noise floor.
-
-#### Kurtograms
-
-The kurtogram visualises kurtosis as a function of (centre frequency, bandwidth). The red rectangle marks the automatically selected optimal demodulation band for each fault class.
-
-![Kurtogram — Outer Race](results/kurtogram_Outer_Race.png)
-
-> *Outer Race: the optimal band (red rectangle) sits in the 3–5 kHz resonance region, consistent with bearing housing natural frequency. K > 3 confirms impulsive fault activity.*
-
-#### Envelope Spectra per Class
-
-After demodulation, the bearing fault rate peaks appear clearly as discrete lines. Class-selective markers annotate only the frequencies relevant to each fault type.
-
-![Envelope Spectrum Per Class — Ch1](results/envelope_per_class_ch1.png)
-
-> *Mean envelope spectrum ± 1σ (50 segments averaged per class). Downward triangles mark detected peaks at characteristic frequencies. Each text box shows HSS diagnostic scores and dominant fault identification.*
-
-#### Raw FFT vs. Envelope Spectrum Comparison
-
-The side-by-side comparison demonstrates the core advantage of the envelope method: fault peaks invisible in the raw FFT become prominent after demodulation.
-
-![Raw FFT vs Envelope — Ch1](results/raw_vs_envelope_ch1.png)
-
-> *Left column: raw FFT — fault peaks masked by structural resonances and shaft harmonics. Right column: envelope spectrum after kurtogram-guided demodulation — BPFO, BPFI, BSF clearly resolved.*
-
-#### Diagnostic Summary
-
-The HSS bar chart and log-ratio classifier feature quantify fault severity across all five classes. A detection threshold of HSS > 3 is applied following Randall & Antoni (2011).
-
-![Peak-Ratio Diagnostic Summary](results/peak_ratio_summary.png)
-
-> *Left: Harmonic Sum Scores per fault-frequency family per class. Right: log(A_BPFI / A_BPFO) — positive values indicate inner-race fault; negative values indicate outer-race fault.*
-
----
 
 ## Technical Summary
 
