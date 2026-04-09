@@ -198,7 +198,7 @@ If you use this repository in your research or work, please cite:
 
 @misc{kumar2026bearing,
   author       = {Rajeev Kumar},
-  title        = {Bearing Fault Diagnosis using FFT, STFT, and Envelope Spectrum Analysis},
+  title        = {Bearing Fault Diagnosis using FFT, STFT, and Feature Analysis},
   year         = {2026},
   howpublished = {\url{https://github.com/rajeevfee/bearing_faults_daignosis}},
   note         = {GitHub repository}
