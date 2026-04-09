@@ -2,7 +2,7 @@
 
 **XJTU Gearbox Dataset · 1st Stage Bearing (61800-type DGBB) · 1800 RPM**
 
-A rigorous, fully reproducible pipeline that takes raw two-channel vibration signals from a gearbox test rig and delivers interpretable fault diagnosis — no black box required. The project implements classical signal processing methods that underpin modern condition monitoring systems: filter design, FFT spectral analysis, STFT time-frequency representation, spectral feature engineering, and Hilbert-transform envelope demodulation with kurtogram-guided band selection.
+A rigorous, fully reproducible pipeline that takes raw two-channel vibration signals from a gearbox test rig and delivers interpretable fault diagnosis — no black box required. The project implements classical signal processing methods that underpin modern condition monitoring systems: filter design, FFT spectral analysis, STFT time-frequency representation and spectral feature engineering.
 
 ---
 
