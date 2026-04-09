@@ -194,6 +194,21 @@ Run cells in order: Cell 1 → Cell 6.
 
 ---
 
+### If this repository contributes to your research, please consider citing the associated publications by the author.
+## Citation
+
+If you use this repository in your research or work, please cite:
+
+@misc{kumar2026bearing,
+  author       = {Rajeev Kumar},
+  title        = {Bearing Fault Diagnosis using FFT, STFT, and Envelope Spectrum Analysis},
+  year         = {2026},
+  howpublished = {\url{https://github.com/rajeevfee/bearing_faults_daignosis}},
+  note         = {GitHub repository}
+}
+
+
+
 ## License
 
 MIT — free to use, adapt, and cite.
