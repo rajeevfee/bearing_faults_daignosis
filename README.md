@@ -163,10 +163,7 @@ Cell 4 ── STFT analysis
         ▼
 Cell 5 ── Feature extraction
               18 features/segment → DataFrame → distributions · scatter · radar
-        │
-        ▼
-Cell 6 ── Envelope spectrum analysis
-              SK kurtogram → BP filter → Hilbert → ESA → HSS diagnostics
+    
 ```
 
 ---
