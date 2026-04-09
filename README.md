@@ -121,8 +121,6 @@ Eighteen scalar features are extracted per segment per channel across three doma
 | FFT | Hann window · amplitude-corrected · dB scale |
 | STFT | N=512 · 75% overlap · Δf=40 Hz · Δt=6.25 ms |
 | Features | 18 per segment per channel |
-| Envelope method | SK kurtogram → BP filter → Hilbert transform → FFT |
-| Diagnostic metric | Harmonic Sum Score (HSS) + log-ratio classifier |
 
 ---
 
